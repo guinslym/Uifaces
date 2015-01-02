@@ -83,6 +83,8 @@ module UiFaces
 
 					]
 
+	BASE_LINK = "https://s3.amazonaws.com/uifaces/faces/twitter/"
+
   def self.face(network=false, username='random', format="epic")
   	#return a image link from uifaces
   	#to make it faster.... network should be false
@@ -119,40 +121,40 @@ module UiFaces
 
   def self.faces(network=false, username='random', format='epic')
   	#return a hash of links
-  	#faces['bigger']
-  	link = self.face(stream, username, format)
+  	#puts faces['bigger']
+  	link = self.face(network, username, format)
   	username = link.split("/")[-2]
-  	original_link = "https://s3.amazonaws.com/uifaces/faces/twitter/"
-  	return faces = {:bigger => original_link + username + "/73.jpg",
-  						 :normal => original_link + username + "/48.jpg",
-  						 :epic   => original_link + username + "/128.jpg",
-  						 :mini   => original_link + username + "/24.jpg"
+  	return faces = {:bigger => BASE_LINK + username + "/73.jpg",
+  						 :normal => BASE_LINK + username + "/48.jpg",
+  						 :epic   => BASE_LINK + username + "/128.jpg",
+  						 :mini   => BASE_LINK + username + "/24.jpg"
   						}
   end
 
   #Only one parameter
   def self.woman(format="epic")
-  	return "https://s3.amazonaws.com/uifaces/faces/twitter/" + WOMEN.sample + "/" + self.width(format) + ".jpg"
+  	return BASE_LINK + WOMEN.sample + "/" + width(format) + ".jpg"
   end
 
   def self.man(format="epic")
-  	return "https://s3.amazonaws.com/uifaces/faces/twitter/" + MEN.sample + "/" + self.width(format) + ".jpg"
+  	return BASE_LINK+ MEN.sample + "/" + self.width(format) + ".jpg"
   end
 
   def self.sex(genre="male", format="epic")
   	if ( genre.eql?("female") )
-  		return "https://s3.amazonaws.com/uifaces/faces/twitter/" + WOMEN.sample + "/" + self.width(format) + ".jpg"
+  		return BASE_LINK + WOMEN.sample + "/" + self.width(format) + ".jpg"
   	else
-  		return "https://s3.amazonaws.com/uifaces/faces/twitter/" + MEN.sample + "/" + self.width(format) + ".jpg"
+  		return BASE_LINK + MEN.sample + "/" + self.width(format) + ".jpg"
   	end
   end
 
   def self.local_random(format="epic")
-  	return "https://s3.amazonaws.com/uifaces/faces/twitter/" + USERNAME.sample + "/" + self.width(format) + ".jpg"
+  	return BASE_LINK + USERNAME.sample + "/" + self.width(format) + ".jpg"
   end
 
   ############################################PRIVATE
   private
+
 	  def self.width(format)
 	  	if(format.eql?"bigger")
 	  		'73'
@@ -164,6 +166,8 @@ module UiFaces
 	  		'128'
 	  	end
 		end
+
+		
 end
 	
 #todo use a dict instead 
