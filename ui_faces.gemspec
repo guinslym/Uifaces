@@ -7,9 +7,9 @@ Gem::Specification.new do |spec|
   spec.name          = "ui_faces"
   spec.version       = UiFaces::VERSION
   spec.authors       = ["Guinsly Mondesir"]
-  spec.email         = ["guinslym @gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.email         = ["guinslym@gmail.com"]
+  spec.summary       = %q{This gem uses UIfaces.com to fake user pictures on your app.}
+  spec.description   = %q{UIFaces is a great website to find pictures to mockup your app. With this gems you can now implement more easily a pictures in your web app.}
   spec.homepage      = ""
   spec.license       = "MIT"
 

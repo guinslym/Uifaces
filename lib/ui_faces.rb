@@ -1,4 +1,4 @@
-require "ui_faces/version"
+#require "ui_faces/version"
 require 'net/http'
 require 'json'
 
@@ -29,31 +29,127 @@ module UiFaces
 		"andyfang98", "viktor_dotsenko", "irfansami2", "timbalabuch", "monicaczarny", "moae84", 
 		"autobanshaq", "marissamcpeak", "carlosblanco_eu", "ddddrew", "htmlstream", "tofslie", 
 		"amlinarev", "saarabpreet", "svenphan", "scottfister", "funwatercat", "ya_zl01", 
-		"pauljakobwhite", "areus", "cookingeasycom", "kirangopal", "grantharr_s", "rpatey"
-						]
+		"pauljakobwhite", "areus", "cookingeasycom", "kirangopal", "grantharr_s", "rpatey",
+		"aaronstump", "dfhdesign", "hejallan", "pf_creative", "rikas", "spacewood_", "sava2500", "sebygarilli", 
+		"dustintheweb", "colynb", "linkinf88k", "wilsonnma", "lettershoppe", "vipinsanker", "spencerortega", 
+		"soh3il", "he_jinsheng", "tomgreever", "meisso_jarno", "lukaszklis", "robturlinckx", "looneydoodle", 
+		"alxleroydeval", "mizhgan", "kimberlygs_", "vista", "raresloth", "ntfblog", "j1tang", "jefffis", "jehnglynn", 
+		"tgormtx", "dan_malarkey", "amoslanka", "mrmartineau", "kaibrach", "skylark64", "antjanus", "kirillgreen", 
+		"brenton_clarke", "matejlatin", "froidz", "nickyzoid", "dreierdominic", "skogberg", "joelcipriano", 
+		"inspiringbg", "donschnelly", "thimo_cz", "russell_baylis", "mashaaaaal", "areskub", "csteib", "petebernardo", 
+		"ilya101010", "jckieangel", "jjsiii", "onkaar", "jbcordina", "lalalaura922", "heyllowlab", "nadya_lex", "suprb", 
+		"pinceladasdaweb", "edwin_de_jongh", "francortz", "indigo90", "vishal19801", "jozh123", "anton0kurilov", 
+		"originalgoatee", "chendahang", "alestart", "jningtho", "antongenkin", "turkutuuli", "razlagutt", "nepdud", 
+		"snowshade", "nate_designer", "peachananr", "shuangshuangli", "quisif", "mrgnw", "devineninaresh", 
+		"nathansimpsongd", "bruno1fernando", "mrxloka", "arpad05", "gunjanraik", "mangosango", "adellecharles", 
+		"rikyushinichi", "ramdreamers", "victinx", "lingeswaran", "codydmd", "chexee", "sorenschroder", "zeppeppers", 
+		"cotegrunenwald", "leelkennedy", "abujahed19", "dahparra", "borryshasian", "leogono", "ianlopshire", 
+		"marciotoledo", "didpopcom", "fidelthomet", "ahmedelgabri", "andrewofficer", "ceekaytweet", "shanya_o", 
+		"aarondgilmore", "herrhaase", "sikeane", "creativebrainbe", "jrxmember", "limpa123", "rbaassi", "haydn_woods", 
+		"puzik", "i_makethings", "olgary", "arminophen", "and_zmei", "mkosterich", "suggeelson", "ektadary", 
+		"nansysweet2", "tristandenyer", "aluisio_azevedo", "areandacom", "allenjordan", "hichamazhairi", "sachingawas", 
+		"thekennythegame", "vashokk", "cattsmall", "elliotnolten", "tyagoneres", "mikewilliam1982", "n_tassone", 
+		"rok_samsa", "eitarafa", "lucassimons1987", "maks_akmal", "007aasim", "phaistonian", "georgedyjr", 
+		"gcmorley", "azizarsl", "flobota", "adamkirkwood", "creative_px", "sannigraphics", "kurtinc", "superhankai", 
+		"strelov_d", "paladinstudio", "richwild", "rv_atom", "vlysergin", "mostafahawary", "gavr1l0", "umairulhaque", 
+		"typografil", "spacekid", "seomarlboro", "chinagrimace", "deedubs", "marcosnwp", "hollymdewolf", "boundbystars", 
+		"mrjohnwalker", "seantremaine", "jghyllebert", "the_frug", "solid_color", "pampersdry", "elcardoson", 
+		"lisakey1986", "michaelcomiskey", "gordo", "olivermonschau", "davidmerrique", "plbabin", "mattdetails", 
+		"michaelbrooksjr", "ariona_rian", "davidvb", "gokhunguneyhan", "brad_frost", "islamgaraev_tim", "kennyadr", 
+		"ahmed_sa3ied", "simply_simpy", "bwagert", "gearoidorourke", "evgeny_ryabcev", "zackeeler", "ooomz", 
+		"richcsmith", "raydeguzmanto", "jemmoudimed", "asna_farid", "davidhemphill", "joshuarule", "dreizle", "dannegm", 
+		"majksner", "fgin69", "_zm", "motionthinks", "ShaneHelm", "bgiardelli", "ntnth", "avnagaraj", "stephenmdixon", 
+		"jolliver", "osmond", "matthewkay_", "powerpointsuper", "itsselvam", "alexanderkirov", "brandon_arnold", 
+		"julesholleboom", "laksgandikota", "kristoffintosh", "prheemo", "sconzen", "tazmattar", "mobfrank", 
+		"alek_djuric", "normanbox", "konvictedofsin", "boheme", "aeon56", "gofrasdesign", "andresenfredrik", "upslon", 
+		"jonpyefinch", "itsjaymem", "vamseekrishnain", "dsaltaren", "bbergher", "jackiesaik", "cheezonbread", 
+		"onlymagugz", "kokikillara", "pavelbuben", "babojan", "thaoalpha1501", "lososina", "michaelcecetka", 
+		"zensenmobile", "thramp", "Chakintosh", "jiceb", "aviddayentonbay", "depaulawagner", "sweetdelisa", 
+		"kadri1914", "tomreinhoudt", "fionaosaurusrex", "robergd", "bbuecherl", "nicoleglynn", "hellofeverrrr", 
+		"jasonkempers", "sterlingrules", "anysmechkar", "loresrockstar", "victorabrantes", "ilucasramos", "bartjo", 
+		"motamarad", "deluzino", "jay_wilburn", "lpzilva", "migl40d", "_iamnyasha", "vitorleal", "edhenderson", 
+		"akmalfikri"]
 
-  def self.face(stream=true, username='random', format="epic")
-  	#return a url 
+	WOMEN = ["jina", "ladylexy", "adellecharles", "kfriedson", "brynn", "pixeliris", "nisaanjani"
+
+					]
+
+	MEN = ["brad_frost", "csswizardry", "guiiipontes", "kurafire", "tomaslau", "cemshid", "dancounsell",
+					"abecherian", "mlane", "peterme", "suprb", "dingyi", "shalt0ni", "vista", "arminophen",
+					"kevin_granger", "rssems", "adhamdannaway", "nexy_dre", "teleject", "9lessons", "dakshbhagya",
+					"_shahedk", "itsjonq", "joshhemsley", "enda", "leemunroe", "vladarbatov", "c_southam", "felipenogs",
+					"kerem", "ManikRathee", "chadengle", "peterlandt", "jaredfitch", "mattchevy", "soffes", "sindresorhus",
+					"motherfuton", "mrjohnwalker", "putorti", "teclaro", "andrewaashen", "aaroni", "boheme", "dustinlamont"
+
+					]
+
+  def self.face(network=false, username='random', format="epic")
+  	#return a image link from uifaces
+  	#to make it faster.... network should be false
 
   	if(username != 'random')
-  		link = "http://uifaces.com/api/v1/user/:"
+  		link = "http://uifaces.com/api/v1/user/"
   	else
   		link = '/api/v1/random'
   	end
 
-  	unless stream
-  		#if you don't want to use internet to access the image link
-  		return "https://s3.amazonaws.com/uifaces/faces/twitter/" + USERNAME.sample + "/" + self.width(format) + ".jpg"
+  	unless network
+  		#if you don't want to use internet to retrieve an image link
+  		#than it will return a custom image link built from the USERNAME array
+  		return local_random(format)
   	else
-	  	response = Net::HTTP.get_response("uifaces.com", link+username)
+  		#I'll try to use the network
+  		begin 
+	  		response = Net::HTTP.get_response("uifaces.com", link + username)
+	  	rescue SocketError
+	  		return local_random(format)
+	  	end
+	  	#checking the response code 200 || 400
 	  	if response.code.eql?'200'
 	  		 hash = JSON.parse(response.body)
 	  		 return hash['image_urls'][format]
 	  	else
-	  		false
+	  		#the username that you are looking for doesn't exist
+	  		## response.code == 404
+	  		return local_random(format)
 	  	end
 	  end#unless
-  end#def self.face
+
+  end#self.face
+
+  def self.faces(network=false, username='random', format='epic')
+  	#return a hash of links
+  	#faces['bigger']
+  	link = self.face(stream, username, format)
+  	username = link.split("/")[-2]
+  	original_link = "https://s3.amazonaws.com/uifaces/faces/twitter/"
+  	return faces = {:bigger => original_link + username + "/73.jpg",
+  						 :normal => original_link + username + "/48.jpg",
+  						 :epic   => original_link + username + "/128.jpg",
+  						 :mini   => original_link + username + "/24.jpg"
+  						}
+  end
+
+  #Only one parameter
+  def self.woman(format="epic")
+  	return "https://s3.amazonaws.com/uifaces/faces/twitter/" + WOMEN.sample + "/" + self.width(format) + ".jpg"
+  end
+
+  def self.man(format="epic")
+  	return "https://s3.amazonaws.com/uifaces/faces/twitter/" + MEN.sample + "/" + self.width(format) + ".jpg"
+  end
+
+  def self.sex(genre="male", format="epic")
+  	if ( genre.eql?("female") )
+  		return "https://s3.amazonaws.com/uifaces/faces/twitter/" + WOMEN.sample + "/" + self.width(format) + ".jpg"
+  	else
+  		return "https://s3.amazonaws.com/uifaces/faces/twitter/" + MEN.sample + "/" + self.width(format) + ".jpg"
+  	end
+  end
+
+  def self.local_random(format="epic")
+  	return "https://s3.amazonaws.com/uifaces/faces/twitter/" + USERNAME.sample + "/" + self.width(format) + ".jpg"
+  end
 
   ############################################PRIVATE
   private
@@ -70,3 +166,4 @@ module UiFaces
 		end
 end
 	
+#todo use a dict instead 
