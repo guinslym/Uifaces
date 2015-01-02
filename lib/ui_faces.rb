@@ -133,27 +133,31 @@ module UiFaces
 
   #Only one parameter
   def self.woman(format="epic")
-  	return BASE_LINK + WOMEN.sample + "/" + width(format) + ".jpg"
+  	return self.retrieve_a_link(format, WOMEN)
   end
 
   def self.man(format="epic")
-  	return BASE_LINK+ MEN.sample + "/" + self.width(format) + ".jpg"
+  	return self.retrieve_a_link(format, MEN)
   end
 
   def self.sex(genre="male", format="epic")
   	if ( genre.eql?("female") )
-  		return BASE_LINK + WOMEN.sample + "/" + self.width(format) + ".jpg"
+  		return self.retrieve_a_link(format, WOMEN)
   	else
-  		return BASE_LINK + MEN.sample + "/" + self.width(format) + ".jpg"
+  		return self.retrieve_a_link(format, MEN)
   	end
   end
 
   def self.local_random(format="epic")
-  	return BASE_LINK + USERNAME.sample + "/" + self.width(format) + ".jpg"
+  	return self.retrieve_a_link(format, USERNAME)
   end
 
   ############################################PRIVATE
   private
+
+  	def self.retrieve_a_link(format="epic", object_name=USERNAME)
+  		return BASE_LINK + object_name.sample + "/" + self.width(format) + ".jpg"
+  	end
 
 	  def self.width(format)
 	  	if(format.eql?"bigger")
@@ -167,7 +171,7 @@ module UiFaces
 	  	end
 		end
 
-		
+
 end
 	
 #todo use a dict instead 
