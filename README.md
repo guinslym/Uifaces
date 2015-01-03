@@ -24,13 +24,13 @@ Or install it yourself as:
 ```ruby
 link = UiFaces.face
 puts link
-=> https://s3.amazonaws.com/uifaces/faces/twitter/kokikillara/128.jpg
+=> https://s3.amazonaws.com/uifaces/faces/twitter/guinslym/128.jpg
 ```
 #####FIND A SPECIFIC USER
 ```ruby
 link = UiFaces.face(true, 'larrygerard')
 puts link
-=> https://s3.amazonaws.com/uifaces/faces/twitter/kokikillara/128.jpg
+=> https://s3.amazonaws.com/uifaces/faces/twitter/guinslym/128.jpg
 ```
 
 #####FIND A SPECIFIC USER BY GENRE
@@ -65,6 +65,8 @@ end
 #app/view/employees/show.html
 <%= image_tag @employee.image, class: "yourclass" %>
 ```
+
+[![guinslym](https://s3.amazonaws.com/uifaces/faces/twitter/guinslym/128.jpg)](http://uifaces.com/guinslym)
 
 
 ## Contributing
