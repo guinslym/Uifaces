@@ -121,10 +121,10 @@ module UiFaces
   	link = self.face(network, username, format)
   	username = link.split("/")[-2]
   	return faces = {:bigger => BASE_LINK + username + "/73.jpg",
-  						 :normal => BASE_LINK + username + "/48.jpg",
-  						 :epic   => BASE_LINK + username + "/128.jpg",
-  						 :mini   => BASE_LINK + username + "/24.jpg"
-  						}
+		 :normal => BASE_LINK + username + "/48.jpg",
+		 :epic   => BASE_LINK + username + "/128.jpg",
+		 :mini   => BASE_LINK + username + "/24.jpg"
+			}
   end
 
   #Only one parameter
