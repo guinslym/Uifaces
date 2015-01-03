@@ -65,7 +65,7 @@ link = UiFaces.face(false, 'random', 'normal')
 ```ruby
 #I'm using the gem 'ffaker' for the name
 10.times do 
-	Employee.find_or_create(
+	Employee.find_or_create_by(
 	:name  => Faker::Name.name.to_s,
 	:image => UiFaces.face
 	)
