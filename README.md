@@ -24,27 +24,33 @@ Or install it yourself as:
 ```ruby
 link = UiFaces.face
 puts link
-	=> https://s3.amazonaws.com/uifaces/faces/twitter/kokikillara/128.jpg
+=> https://s3.amazonaws.com/uifaces/faces/twitter/kokikillara/128.jpg
 ```
 #####FIND A SPECIFIC USER
-	link = UiFaces.face(true, 'larrygerard')
-	puts link
- 	=> https://s3.amazonaws.com/uifaces/faces/twitter/kokikillara/128.jpg
+```ruby
+link = UiFaces.face(true, 'larrygerard')
+puts link
+=> https://s3.amazonaws.com/uifaces/faces/twitter/kokikillara/128.jpg
+```
 
 #####FIND A SPECIFIC USER BY GENRE
-	link = UiFaces.sex('woman')
-	woman = UiFaces.woman
-	man = UiFaces.man
+```ruby
+link = UiFaces.sex('woman')
+woman = UiFaces.woman
+man = UiFaces.man
+```
 
 #####RETRIEVE A HASH with different pictures size
-	link = UiFaces.faces
-	puts link
-	=> {
-	:bigger=>"https://s3.amazonaws.com/uifaces/faces/twitter/guiiipontes/73.jpg", 
-	:normal=>"https://s3.amazonaws.com/uifaces/faces/twitter/guiiipontes/48.jpg", 
-	:epic=>"https://s3.amazonaws.com/uifaces/faces/twitter/guiiipontes/128.jpg", 
-	:mini=>"https://s3.amazonaws.com/uifaces/faces/twitter/guiiipontes/24.jpg"
-	}
+```ruby
+link = UiFaces.faces
+puts link
+=> {
+:bigger=>"https://s3.amazonaws.com/uifaces/faces/twitter/guiiipontes/73.jpg", 
+:normal=>"https://s3.amazonaws.com/uifaces/faces/twitter/guiiipontes/48.jpg", 
+:epic=>"https://s3.amazonaws.com/uifaces/faces/twitter/guiiipontes/128.jpg", 
+:mini=>"https://s3.amazonaws.com/uifaces/faces/twitter/guiiipontes/24.jpg"
+}
+```
 
 #####RUBY ON RAILS(seed.rb)
 	#I'm using the gem 'ffaker' for the name
