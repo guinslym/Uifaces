@@ -59,7 +59,7 @@ puts link[:bigger]
 => https://s3.amazonaws.com/uifaces/faces/twitter/guiiipontes/73.jpg
 ```
 
-#####RUBY ON RAILS(seed.rb)
+#####RUBY ON RAILS(db/seeds.rb)
 ```ruby
 #I'm using the gem 'ffaker' for the name
 10.times do 
