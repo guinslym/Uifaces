@@ -40,10 +40,6 @@ woman = UiFaces.woman
 man = UiFaces.man
 ```
 
-#####SPECIFYING the image size
-```ruby
-link = UiFaces.face(false, 'random', 'normal')
-```
 
 #####RETRIEVE A HASH with different pictures size
 ```ruby
@@ -57,6 +53,11 @@ puts link
 }
 puts link[:bigger]
 => https://s3.amazonaws.com/uifaces/faces/twitter/guiiipontes/73.jpg
+```
+
+#####SPECIFYING the image size
+```ruby
+link = UiFaces.face(false, 'random', 'normal')
 ```
 
 #####RUBY ON RAILS(db/seeds.rb)
