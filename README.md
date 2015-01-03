@@ -30,7 +30,7 @@ puts link
 ```ruby
 link = UiFaces.face(true, 'larrygerard')
 puts link
-=> https://s3.amazonaws.com/uifaces/faces/twitter/guinslym/128.jpg
+=> https://s3.amazonaws.com/uifaces/faces/twitter/larrygerard/128.jpg
 ```
 
 #####FIND A SPECIFIC USER BY GENRE
