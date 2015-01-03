@@ -33,7 +33,7 @@ puts link
 => https://s3.amazonaws.com/uifaces/faces/twitter/larrygerard/128.jpg
 ```
 
-#####FIND A SPECIFIC USER BY GENRE
+#####FIND A USER BY GENRE
 ```ruby
 link = UiFaces.sex('woman')
 woman = UiFaces.woman
