@@ -55,7 +55,6 @@ puts link
 :epic=>"https://s3.amazonaws.com/uifaces/faces/twitter/guiiipontes/128.jpg", 
 :mini=>"https://s3.amazonaws.com/uifaces/faces/twitter/guiiipontes/24.jpg"
 }
-puts link
 puts link[:bigger]
 => https://s3.amazonaws.com/uifaces/faces/twitter/guiiipontes/73.jpg
 ```
