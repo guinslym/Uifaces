@@ -141,7 +141,7 @@ module UiFaces
   end
 
   def self.sex(genre="male", format="epic")
-  	if ( genre.eql?("female") )
+  	if ( genre.eql?("female") or (genre.eql?("woman")))
   		return self.retrieve_a_link(format, WOMEN)
   	else
   		return self.retrieve_a_link(format, MEN)
@@ -151,27 +151,26 @@ module UiFaces
   def self.local_random(format="epic")
   	return self.retrieve_a_link(format, USERNAME)
   end
+ 
 
-  ############################################PRIVATE
-  private
+	def self.retrieve_a_link(format="epic", object_name=USERNAME)
+		return BASE_LINK + object_name.sample + "/" + self.width(format) + ".jpg"
+	end
 
-  	def self.retrieve_a_link(format="epic", object_name=USERNAME)
-  		return BASE_LINK + object_name.sample + "/" + self.width(format) + ".jpg"
+
+  def self.width(format)
+  	if(format.eql?"bigger")
+  		'73'
+  	elsif (format.eql?"normal")
+  		'48'
+  	elsif (format.eql?"mini")
+  		'24'
+  	else
+  		'128'
   	end
+	end
 
-	  def self.width(format)
-	  	if(format.eql?"bigger")
-	  		'73'
-	  	elsif (format.eql?"normal")
-	  		'48'
-	  	elsif (format.eql?"mini")
-	  		'24'
-	  	else
-	  		'128'
-	  	end
-		end
 
 
 end
 	
-#todo use a dict instead 

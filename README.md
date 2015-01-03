@@ -1,6 +1,6 @@
 # UiFaces
 
-TODO: Write a gem description
+This gem uses UIfaces.com ( https://www.uifaces.com/ ) to **fake user pictures** on your app. You would like to use real user images for your app. This gem might be right you need. All the images comes from the 'authorized' section from uifaces and all images are real Twitter users images or avatar that previously agreeded to share their images.
 
 ## Installation
 
@@ -19,13 +19,51 @@ Or install it yourself as:
     $ gem install ui_faces
 
 ## Usage
+	
+#####FIND A RANDOM USER
+	link = UiFaces.face
+	puts link
+ 	=> https://s3.amazonaws.com/uifaces/faces/twitter/kokikillara/128.jpg
 
-TODO: Write usage instructions here
+#####FIND A SPECIFIC USER
+	link = UiFaces.face(true, 'larrygerard')
+	puts link
+ 	=> https://s3.amazonaws.com/uifaces/faces/twitter/kokikillara/128.jpg
+
+#####FIND A SPECIFIC USER BY GENRE
+	link = UiFaces.sex('woman')
+	woman = UiFaces.woman
+	man = UiFaces.man
+
+#####RETRIEVE A HASH with different pictures size
+	link = UiFaces.faces
+	puts link
+	=> {
+	:bigger=>"https://s3.amazonaws.com/uifaces/faces/twitter/guiiipontes/73.jpg", 
+	:normal=>"https://s3.amazonaws.com/uifaces/faces/twitter/guiiipontes/48.jpg", 
+	:epic=>"https://s3.amazonaws.com/uifaces/faces/twitter/guiiipontes/128.jpg", 
+	:mini=>"https://s3.amazonaws.com/uifaces/faces/twitter/guiiipontes/24.jpg"
+	}
+
+#####RUBY ON RAILS(seed.rb)
+	10.times do 
+		Employee.find_or_create(
+		:name  => Faker,
+		:image => UiFaces.face
+		)
+	end
+
+	#app/view/employees/show.html
+	<%= image_tag @employee.image, class: "yourclass" %>
+
+
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/ui_faces/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+1. Star it :)
+2. Fork it ( https://github.com/guinslym/ui_faces/fork )
+3. Create your feature branch (`git checkout -b my-new-feature`)
+4. Test it
+5. Commit your changes (`git commit -am 'Add some feature'`)
+6. Push to the branch (`git push origin my-new-feature`)
+7. Create a new Pull Request
