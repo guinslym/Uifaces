@@ -46,9 +46,10 @@ Or install it yourself as:
 	}
 
 #####RUBY ON RAILS(seed.rb)
+	#I'm using the gem 'ffaker' for the name
 	10.times do 
 		Employee.find_or_create(
-		:name  => Faker,
+		:name  => Faker::Name.name.to_s,
 		:image => UiFaces.face
 		)
 	end
