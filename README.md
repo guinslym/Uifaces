@@ -30,8 +30,8 @@ puts link
 ```ruby
 link = UiFaces.face(true, 'larrygerard')
 puts link
-```
 => https://s3.amazonaws.com/uifaces/faces/twitter/kokikillara/128.jpg
+```
 
 #####FIND A SPECIFIC USER BY GENRE
 ```ruby
