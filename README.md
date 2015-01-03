@@ -21,10 +21,11 @@ Or install it yourself as:
 ## Usage
 	
 #####FIND A RANDOM USER
-	link = UiFaces.face
-	puts link
- 	=> https://s3.amazonaws.com/uifaces/faces/twitter/kokikillara/128.jpg
-
+```ruby
+link = UiFaces.face
+puts link
+	=> https://s3.amazonaws.com/uifaces/faces/twitter/kokikillara/128.jpg
+```
 #####FIND A SPECIFIC USER
 	link = UiFaces.face(true, 'larrygerard')
 	puts link
