@@ -82,89 +82,90 @@ module UiFaces
 	BASE_LINK = "https://s3.amazonaws.com/uifaces/faces/twitter/"
 
   def self.face(network=false, username='random', format="epic")
-  	#return a image link from uifaces
-  	#to make it faster.... network should be false
+    #return a image link from uifaces
+    #to make it faster.... network should be false
 
-  	if(username != 'random')
-  		link = "http://uifaces.com/api/v1/user/"
-  	else
-  		link = '/api/v1/random'
-  	end
+    if(username != 'random')
+      link = "http://uifaces.com/api/v1/user/"
+    else
+      link = '/api/v1/random'
+    end
 
-  	unless network
-  		#if you don't want to use internet to retrieve an image link
-  		#than it will return a custom image link built from the USERNAME array
-  		return local_random(format)
-  	else
-  		#I'll try to use the network
-  		begin 
-	  		response = Net::HTTP.get_response("uifaces.com", link + username)
-	  	rescue SocketError
-	  		return local_random(format)
-	  	end
-	  	#checking the response code 200 || 400
-	  	if response.code.eql?'200'
-	  		 hash = JSON.parse(response.body)
-	  		 return hash['image_urls'][format]
-	  	else
-	  		#the username that you are looking for doesn't exist
-	  		## response.code == 404
-	  		return local_random(format)
-	  	end
-	  end#unless
+    unless network
+      #if you don't want to use internet to retrieve an image link
+      #than it will return a custom image link built from the USERNAME array
+      return local_random(format)
+    else
+      #I'll try to use the network
+      begin 
+	response = Net::HTTP.get_response("uifaces.com", link + username)
+      rescue SocketError
+        return local_random(format)
+      end
+	#checking the response code 200 || 400
+	if response.code.eql?'200'
+	  hash = JSON.parse(response.body)
+	  return hash['image_urls'][format]
+	else
+	  #the username that you are looking for doesn't exist
+	  ## response.code == 404
+	  return local_random(format)
+	end
+    end#unless
 
   end#self.face
 
+  
   def self.faces(network=false, username='random', format='epic')
-  	#return a hash of links
-  	#puts faces['bigger']
-  	link = self.face(network, username, format)
-  	username = link.split("/")[-2]
-  	return faces = {:bigger => BASE_LINK + username + "/73.jpg",
-		 :normal => BASE_LINK + username + "/48.jpg",
-		 :epic   => BASE_LINK + username + "/128.jpg",
-		 :mini   => BASE_LINK + username + "/24.jpg"
-			}
+    #return a hash of links
+    #puts faces['bigger']
+    link = self.face(network, username, format)
+    username = link.split("/")[-2]
+    return faces = {:bigger => BASE_LINK + username + "/73.jpg",
+      :normal => BASE_LINK + username + "/48.jpg",
+      :epic   => BASE_LINK + username + "/128.jpg",
+      :mini   => BASE_LINK + username + "/24.jpg"
+    }
   end
 
   #Only one parameter
   def self.woman(format="epic")
-  	return self.retrieve_a_link(format, WOMEN)
+    return self.retrieve_a_link(format, WOMEN)
   end
 
   def self.man(format="epic")
-  	return self.retrieve_a_link(format, MEN)
+    return self.retrieve_a_link(format, MEN)
   end
 
   def self.sex(genre="male", format="epic")
-  	if ( genre.eql?("female") or (genre.eql?("woman")))
-  		return self.retrieve_a_link(format, WOMEN)
-  	else
-  		return self.retrieve_a_link(format, MEN)
-  	end
+    if ( genre.eql?("female") or (genre.eql?("woman")))
+      return self.retrieve_a_link(format, WOMEN)
+    else
+      return self.retrieve_a_link(format, MEN)
+    end
   end
 
   def self.local_random(format="epic")
-  	return self.retrieve_a_link(format, USERNAME)
+    return self.retrieve_a_link(format, USERNAME)
   end
  
 
-	def self.retrieve_a_link(format="epic", object_name=USERNAME)
-		return BASE_LINK + object_name.sample + "/" + self.width(format) + ".jpg"
-	end
+  def self.retrieve_a_link(format="epic", object_name=USERNAME)
+    return BASE_LINK + object_name.sample + "/" + self.width(format) + ".jpg"
+  end
 
 
   def self.width(format)
-  	if(format.eql?"bigger")
-  		'73'
-  	elsif (format.eql?"normal")
-  		'48'
-  	elsif (format.eql?"mini")
-  		'24'
-  	else
-  		'128'
-  	end
-	end
+    if(format.eql?"bigger")
+      '73'
+    elsif (format.eql?"normal")
+      '48'
+    elsif (format.eql?"mini")
+      '24'
+    else
+      '128'
+    end
+  end
 
 
 
