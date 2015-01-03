@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 	
-#####FIND A RANDOM USER
+#####RETRIEVE A RANDOM USER
 ```ruby
 link = UiFaces.face
 puts link
@@ -33,11 +33,16 @@ puts link
 => https://s3.amazonaws.com/uifaces/faces/twitter/larrygerard/128.jpg
 ```
 
-#####FIND A USER BY GENRE
+#####RETRIEVE A USER BY GENRE
 ```ruby
 link = UiFaces.sex('woman')
 woman = UiFaces.woman
 man = UiFaces.man
+```
+
+#####SPECIFYING the image size
+```ruby
+link = UiFaces.face(false, 'random', 'normal')
 ```
 
 #####RETRIEVE A HASH with different pictures size
@@ -50,6 +55,9 @@ puts link
 :epic=>"https://s3.amazonaws.com/uifaces/faces/twitter/guiiipontes/128.jpg", 
 :mini=>"https://s3.amazonaws.com/uifaces/faces/twitter/guiiipontes/24.jpg"
 }
+puts link
+puts link[:bigger]
+=> https://s3.amazonaws.com/uifaces/faces/twitter/guiiipontes/73.jpg
 ```
 
 #####RUBY ON RAILS(seed.rb)
