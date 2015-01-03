@@ -70,18 +70,14 @@ module UiFaces
 		"motamarad", "deluzino", "jay_wilburn", "lpzilva", "migl40d", "_iamnyasha", "vitorleal", "edhenderson", 
 		"akmalfikri"]
 
-	WOMEN = ["jina", "ladylexy", "adellecharles", "kfriedson", "brynn", "pixeliris", "nisaanjani"
-
-					]
+	WOMEN = ["jina", "ladylexy", "adellecharles", "kfriedson", "brynn", "pixeliris", "nisaanjani"]
 
 	MEN = ["brad_frost", "csswizardry", "guiiipontes", "kurafire", "tomaslau", "cemshid", "dancounsell",
 					"abecherian", "mlane", "peterme", "suprb", "dingyi", "shalt0ni", "vista", "arminophen",
 					"kevin_granger", "rssems", "adhamdannaway", "nexy_dre", "teleject", "9lessons", "dakshbhagya",
 					"_shahedk", "itsjonq", "joshhemsley", "enda", "leemunroe", "vladarbatov", "c_southam", "felipenogs",
 					"kerem", "ManikRathee", "chadengle", "peterlandt", "jaredfitch", "mattchevy", "soffes", "sindresorhus",
-					"motherfuton", "mrjohnwalker", "putorti", "teclaro", "andrewaashen", "aaroni", "boheme", "dustinlamont"
-
-					]
+					"motherfuton", "mrjohnwalker", "putorti", "teclaro", "andrewaashen", "aaroni", "boheme", "dustinlamont"]
 
 	BASE_LINK = "https://s3.amazonaws.com/uifaces/faces/twitter/"
 
