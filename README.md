@@ -75,7 +75,7 @@ end
 #app/view/employees/show.html
 <%= image_tag @employee.image, class: "yourclass" %>
 
-#or within a link
+#<!-- or within a link -->
 <%= link_to href: 'http://uifaces.com/guinslym' do %>
     <%= image_tag @employee.image,  alt: 'a face that is unnervingly happy'%>
 <% end %>
