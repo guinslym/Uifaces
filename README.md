@@ -61,9 +61,10 @@ link = UiFaces.face(false, 'random', 'normal')
 => https://s3.amazonaws.com/uifaces/faces/twitter/anton0kurilov/48.jpg
 ```
 
-#####RUBY ON RAILS(db/seeds.rb)
+#####RUBY ON RAILS
 ```ruby
-#I'm using the gem 'ffaker' for the name
+#db/seeds.rb
+#I'm using the gem 'faker' for the name
 10.times do 
 	Employee.find_or_create_by(
 	:name  => Faker::Name.name.to_s,
