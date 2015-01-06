@@ -73,6 +73,11 @@ end
 
 #app/view/employees/show.html
 <%= image_tag @employee.image, class: "yourclass" %>
+
+or within a link
+<%= link_to href: 'http://uifaces.com/guinslym' do %>
+    <%= image_tag @employee.image,  alt: 'a face that is unnervingly happy'%>
+<% end %>
 ```
 
 [![guinslym](https://s3.amazonaws.com/uifaces/faces/twitter/guinslym/128.jpg)](http://uifaces.com/guinslym)
@@ -81,7 +86,7 @@ end
 ## Contributing
 
 1. Star it :)
-2. Fork it ( https://github.com/guinslym/ui_faces/fork )
+2. Fork it ( https://github.com/guinslym/Uifaces/fork )
 3. Create your feature branch (`git checkout -b my-new-feature`)
 4. Test it
 5. Commit your changes (`git commit -am 'Add some feature'`)

@@ -130,28 +130,30 @@ module UiFaces
 
   #Only one parameter
   def self.woman(format="epic")
-    return self.retrieve_a_link(format, WOMEN)
+    return retrieve_a_link(format, WOMEN)
   end
 
   def self.man(format="epic")
-    return self.retrieve_a_link(format, MEN)
+    return retrieve_a_link(format, MEN)
   end
 
   def self.sex(genre="male", format="epic")
     if ( genre.eql?("female") or (genre.eql?("woman")))
-      return self.retrieve_a_link(format, WOMEN)
+      return retrieve_a_link(format, WOMEN)
     else
-      return self.retrieve_a_link(format, MEN)
+      return retrieve_a_link(format, MEN)
     end
   end
 
+  private
+
   def self.local_random(format="epic")
-    return self.retrieve_a_link(format, USERNAME)
+    return retrieve_a_link(format, USERNAME)
   end
  
 
   def self.retrieve_a_link(format="epic", object_name=USERNAME)
-    return BASE_LINK + object_name.sample + "/" + self.width(format) + ".jpg"
+    return BASE_LINK + object_name.sample + "/" + width(format) + ".jpg"
   end
 
 
@@ -170,4 +172,3 @@ module UiFaces
 
 
 end
-	

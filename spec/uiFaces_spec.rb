@@ -32,11 +32,13 @@ describe UiFaces do
     expect(UiFaces::WOMEN.include?link).to eql(true)
   end
   it "::In case of SocketError take a random image" do
+    #need to turn off the network connection to pass
     link = UiFaces.face(true, 'larrygerard')
     link = link.split("/")[-2]
     expect(UiFaces::USERNAME.include?link).to eql(true)
   end
   it "::In case of error 400 take a random image" do
+    #need to simulate a 400 error
     link = UiFaces.face(true, 'larrygerard')
     link = link.split("/")[-2]
     expect(UiFaces::USERNAME.include?link).to eql(true)
@@ -49,6 +51,10 @@ describe UiFaces do
       :epic => a_string_ending_with(".jpg"),
       :mini => an_instance_of(String)
       )
+  end
+  it "::User shouldn't be able to access private methods" do
+    subject { UiFaces.local_random }
+    it { is_expected.to be_secret }
   end
 
 end
