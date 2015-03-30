@@ -70,7 +70,11 @@ module UiFaces
 	"motamarad", "deluzino", "jay_wilburn", "lpzilva", "migl40d", "_iamnyasha", "vitorleal", "edhenderson", 
 	"akmalfikri"]
 
-	WOMEN = ["jina", "ladylexy", "adellecharles", "kfriedson", "brynn", "pixeliris", "nisaanjani"]
+	WOMEN = ["jina", "ladylexy", "adellecharles", "kfriedson", "brynn", "pixeliris", "nisaanjani", "uxceo",
+           "allisongrayce", "stylecampaign", "syswarren", "nettatheninja", "chexee", "geeftvorm",
+          "marktimemedia", "jennyshen", "andrea211087", "mtnmissy", "chloepark", "idiot_girl", "irenetrn",
+          "lettershoppe", "jackiesaik", "missbgui", "kaelifa", "samihah", "lady_katherine",
+          "kirstyllee", "yuanwang1", "cynthiasavard", "megdraws", "katiefritz"]
 
 	MEN = ["brad_frost", "csswizardry", "guiiipontes", "kurafire", "tomaslau", "cemshid", "dancounsell",
 	"abecherian", "mlane", "peterme", "suprb", "dingyi", "shalt0ni", "vista", "arminophen",
