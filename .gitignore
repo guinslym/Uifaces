@@ -13,3 +13,5 @@
 *.a
 mkmf.log
 install/
+lib\check.py
+lib/check.py
