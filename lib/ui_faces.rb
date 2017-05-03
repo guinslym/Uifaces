@@ -10,7 +10,7 @@ module UiFaces
 	'boheme', 'cemshid', 'thrivesolo', 'enda', 'jollynutlet', 'adellecharles', 'peterme', 'mghoz', 
 	'flamekaizar', 'jina', 'dustinlamont', 'idiot', 'joshhemsley', 'mlane', 'nexy_dre', 'sindresorhus', 
 	'sillyleo', 'motherfuton', 'tomaslau', 'arminophen', 'guiiipontes', 'c_southam', 
-	'mrjohnwalker', 'iconfinder', 'glif', '_hartjeg', 'soffes', 'teleject', 'brynn', 
+	'mrjohnwalker', 'iconfinder', 'glif', '_hartjeg', 'teleject', 'brynn', 
 	'rssems', 'felipenogs', 'gt', 'mattchevy', 'jaredfitch', 'andrewaashen', 'ladylexy', 
 	'brandclay', 'abecherian', 'ManikRathee', 'vista', 'leemunroe', 'dingyi', 'putorti', 
 	'dakshbhagya', 'dannpetty', 'teclaro', '_shahedk', 'kfriedson', 'kevin_granger', 'fffabs', 
