@@ -70,17 +70,18 @@ module UiFaces
 	"motamarad", "deluzino", "jay_wilburn", "lpzilva", "migl40d", "_iamnyasha", "vitorleal", "edhenderson", 
 	"akmalfikri"]
 
+
 	WOMEN = ["jina", "ladylexy", "adellecharles", "kfriedson", "brynn", "pixeliris", "nisaanjani", "uxceo",
-           "allisongrayce", "stylecampaign", "syswarren", "nettatheninja", "chexee", "geeftvorm",
-          "marktimemedia", "jennyshen", "andrea211087", "mtnmissy", "chloepark", "idiot_girl", "irenetrn",
-          "lettershoppe", "jackiesaik", "missbgui", "kaelifa", "samihah", "lady_katherine",
-          "kirstyllee", "yuanwang1", "cynthiasavard", "megdraws", "katiefritz"]
+	       "allisongrayce", "stylecampaign", "syswarren", "nettatheninja", "chexee", "geeftvorm",
+	      "marktimemedia", "jennyshen", "andrea211087", "mtnmissy", "idiot_girl", "irenetrn",
+	      "lettershoppe", "jackiesaik", "missbgui", "kaelifa", "samihah", "lady_katherine",
+	      "kirstyllee", "yuanwang1", "cynthiasavard", "megdraws", "katiefritz"]
 
 	MEN = ["brad_frost", "csswizardry", "guiiipontes", "kurafire", "tomaslau", "cemshid", "dancounsell",
 	"abecherian", "mlane", "peterme", "suprb", "dingyi", "shalt0ni", "vista", "arminophen",
 	"kevin_granger", "rssems", "adhamdannaway", "nexy_dre", "teleject", "9lessons", "dakshbhagya",
 	"_shahedk", "itsjonq", "joshhemsley", "enda", "leemunroe", "vladarbatov", "c_southam", "felipenogs",
-	"kerem", "ManikRathee", "chadengle", "peterlandt", "jaredfitch", "mattchevy", "soffes", "sindresorhus",
+	"kerem", "ManikRathee", "chadengle", "peterlandt", "jaredfitch", "mattchevy", "sindresorhus",
 	"motherfuton", "mrjohnwalker", "putorti", "teclaro", "andrewaashen", "aaroni", "boheme", "dustinlamont"]
 
 	BASE_LINK = "https://s3.amazonaws.com/uifaces/faces/twitter/"
