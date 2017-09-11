@@ -15,3 +15,4 @@ mkmf.log
 install/
 lib\check.py
 lib/check.py
+ui_faces*.gem
