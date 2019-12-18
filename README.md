@@ -55,13 +55,13 @@ puts link[:bigger]
 => https://s3.amazonaws.com/uifaces/faces/twitter/guiiipontes/73.jpg
 ```
 
-#####SPECIFYING the image size
+##### SPECIFYING the image size
 ```ruby
 link = UiFaces.face(false, 'random', 'normal')
 => https://s3.amazonaws.com/uifaces/faces/twitter/anton0kurilov/48.jpg
 ```
 
-#####RUBY ON RAILS
+##### RUBY ON RAILS
 ```ruby
 #db/seeds.rb
 #I'm using the gem 'faker' for the name
